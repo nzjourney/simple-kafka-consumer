@@ -17,7 +17,9 @@ consumer.subscribe("hello-world")
 
 # Stop the consumer when the SIGTERM signal is sent to the process.
 # It's better to shut down gracefully than to kill the process.
-trap("TERM") { consumer.stop }
+trap("TERM") { 
+  consumer.stop 
+}
 
 # This will loop indefinitely, yielding each message in turn.
 consumer.each_message do |message|

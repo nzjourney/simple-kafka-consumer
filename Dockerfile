@@ -10,6 +10,5 @@ RUN bundle install
 
 COPY . .
 
-EXPOSE 9292
 RUN chmod +x main.rb
 CMD ["ruby" "main.rb"]

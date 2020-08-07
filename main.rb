@@ -21,6 +21,5 @@ trap("TERM") { consumer.stop }
 
 # This will loop indefinitely, yielding each message in turn.
 consumer.each_message do |message|
-  puts message.topic, message.partition
-  puts message.offset, message.key, message.value
+  puts message.key, message.value
 end
